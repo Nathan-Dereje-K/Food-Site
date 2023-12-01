@@ -11,12 +11,12 @@ const Navbar = () => {
   return (
     <div className="max-w-[1649px] mx-auto flex justify-between items-center p-4">
       {/* left Side */}
-      <div className="flex items-center">
+      <div className="flex items-center ">
         <div onClick={() => setNav(!nav)}
          className="cursor-pointer">
           <AiOutlineMenu size={30} />
         </div>
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2 ">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl px-4 ">
           Gold <span className="font-bold">Eats</span>
         </h1>
         <div className="hidden md:flex items-center bg-gray-200 rounded-full p-1 text-[14px]">
@@ -31,16 +31,17 @@ const Navbar = () => {
         <input
           className="bg-transparent w-full focus:outline-none p-2"
           type="text"
-          placeholder="Search food ..."
+          placeholder="Search foods ..."
         />
       </div>
 
       {/* Shopping Cart  */}
 
-      <button className="bg-black text-white hidden md:flex px-2 items-center py-2 rounded-full">
+      <button className="bg-black text-white hidden md:flex px-2 items-center py-2 rounded-full hover:bg-gray-500">
         <BsFillCartFill size={20} className="mr-2" />
         Cart
       </button>
+      
       {/* Mobile Menu */}
       {/* Overlay */}
       {nav ? <div className="bg-black/80 fixed w-full h-screen z-10 top-0 left-0"></div>
